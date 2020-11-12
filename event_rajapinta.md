@@ -38,8 +38,8 @@ Tässä dokumentoidaan kaikki Event- eli tapahtuma-luokkaan kohdistuvat API-kuts
             "events": [
                 {
                     "event_name": Event name,
-                    "starts_at": "2020.10.01.12.00.00",
-                    "ends_at": "2020.10.01.18.00.00",
+                    "starts_at":"2020-10-01T12:00", 
+                    "ends_at":"2020-10-01T13:00", 
                     "capacity": 1000,
                     "_links": {
                         "self": {
@@ -77,7 +77,7 @@ Tässä dokumentoidaan kaikki Event- eli tapahtuma-luokkaan kohdistuvat API-kuts
 * **Status:** 404 Not Found <br />
     **Sisältö:** 
         {
-            "timestamp": "2020-09-29T18:003:23.758+00:00",
+            "timestamp": "2020-10-01T12:00",
             "status": 404,
             "error": "Not Found",
             "message": "No message available",
@@ -123,8 +123,8 @@ Tässä dokumentoidaan kaikki Event- eli tapahtuma-luokkaan kohdistuvat API-kuts
 
         {
             "event_name": Event name,
-            "starts_at": "2020.10.01.12.00.00",
-            "ends_at": "2020.10.01.18.00.00",
+            "starts_at":"2020-10-01T12:00", 
+            "ends_at":"2020-10-01T13:00", 
             "capacity": 1000,
             "_links": {
                 "self": {
@@ -183,12 +183,11 @@ Lisää uuden tapahtuman tietokantaan.
 
         {
             "event_name":"Event name",
-            "starts_at":"2020.10.01.12.00.00", 
-            "ends_at":"2020.10.01.18.00.00", 
+            "starts_at":"2020-10-01T12:00", 
+            "ends_at":"2020-10-01T13:00", 
             "capacity":"1000", 
             "organizer_id":"/api/organizer/{id}", 
             "location_id":"/api/location/{id}"", 
-            "price_cat_id":"/api/priceCat/{id}""
         }
 
 * **Onnistunut vastaus:**
@@ -198,8 +197,8 @@ Lisää uuden tapahtuman tietokantaan.
 
         {
             "event_name": Event name,
-            "starts_at": "2020.10.01.12.00.00",
-            "ends_at": "2020.10.01.18.00.00",
+            "starts_at":"2020-10-01T12:00", 
+            "ends_at":"2020-10-01T13:00", 
             "capacity": 1000,
             "_links": {
                 "self": {
@@ -306,12 +305,11 @@ Muuttaa tapahtumaa tietokannassa.
 
         {
             "event_name":"Event name",
-            "starts_at":"2020.10.01.12.00.00", 
-            "ends_at":"2020.10.01.18.00.00", 
+            "starts_at":"2020-10-01T12:00", 
+            "ends_at":"2020-10-01T13:00", 
             "capacity":"1000", 
             "organizer_id":"/api/organizer/{id}", 
             "location_id":"/api/location/{id}"", 
-            "price_cat_id":"/api/priceCat/{id}""
         }
 
 * **Onnistunut vastaus:**
@@ -321,8 +319,8 @@ Muuttaa tapahtumaa tietokannassa.
 
         {
             "event_name": Event name,
-            "starts_at": "2020.10.01.12.00.00",
-            "ends_at": "2020.10.01.18.00.00",
+            "starts_at":"2020-10-01T12:00", 
+            "ends_at":"2020-10-01T13:00", 
             "capacity": 1000,
             "_links": {
                 "self": {
@@ -385,9 +383,9 @@ Alla olevat kutsut toimivat dataparametrinä.
 
         {"event_name":"Event name"}
 
-        {"starts_at":"2020.10.01.12.00.00"}
+        {"starts_at":"2020-10-01T12:00"}
 
-        {"ends_at":"2020.10.01.18.00.00"}
+        {"ends_at":"2020-10-01T13:00"}
 
         {"capacity":"1000"}
 
@@ -404,8 +402,8 @@ Alla olevat kutsut toimivat dataparametrinä.
 
         {
             "event_name": Event name,
-            "starts_at": "2020.10.01.12.00.00",
-            "ends_at": "2020.10.01.18.00.00",
+            "starts_at":"2020-10-01T12:00", 
+            "ends_at":"2020-10-01T13:00", 
             "capacity": 1000,
             "_links": {
                 "self": {
