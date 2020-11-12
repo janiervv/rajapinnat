@@ -32,65 +32,66 @@ Palauttaa JSON-tyyppisen listan käyttäjistä.
   
   * **Status:** 200 OK <br />
     **Sisältö:** 
-    `{
-    "_embedded": {
-        "ordrs": [
-            {
-                "sold": "2020-10-01T00:00:00.000+00:00",
+            `{
+            "_embedded": {
+                "ordrs": [
+                    {
+                        "sold": "2020-10-01T00:00:00.000+00:00",
+                        "_links": {
+                            "self": {
+                                "href": "http://localhost:8080/api/ordrs/6"
+                            },
+                            "ordr": {
+                                "href": "http://localhost:8080/api/ordrs/6"
+                            },
+                            "user": {
+                                "href": "http://localhost:8080/api/ordrs/6/user"
+                            },
+                            "tickets": {
+                                "href": "http://localhost:8080/api/ordrs/6/tickets"
+                            }
+                        }
+                    },
+                    {
+                        "sold": null,
+                        "_links": {
+                            "self": {
+                                "href": "http://localhost:8080/api/ordrs/7"
+                            },
+                            "ordr": {
+                                "href": "http://localhost:8080/api/ordrs/7"
+                            },
+                            "user": {
+                                "href": "http://localhost:8080/api/ordrs/7/user"
+                            },
+                            "tickets": {
+                                "href": "http://localhost:8080/api/ordrs/7/tickets"
+                            }
+                        }
+                    }
+                ]
+                },
                 "_links": {
                     "self": {
-                        "href": "http://localhost:8080/api/ordrs/6"
+                        "href": "http://localhost:8080/api/ordrs"
                     },
-                    "ordr": {
-                        "href": "http://localhost:8080/api/ordrs/6"
-                    },
-                    "user": {
-                        "href": "http://localhost:8080/api/ordrs/6/user"
-                    },
-                    "tickets": {
-                        "href": "http://localhost:8080/api/ordrs/6/tickets"
+                    "profile": {
+                        "href": "http://localhost:8080/api/profile/ordrs"
                     }
                 }
-            },
-            {
-                "sold": null,
-                "_links": {
-                    "self": {
-                        "href": "http://localhost:8080/api/ordrs/7"
-                    },
-                    "ordr": {
-                        "href": "http://localhost:8080/api/ordrs/7"
-                    },
-                    "user": {
-                        "href": "http://localhost:8080/api/ordrs/7/user"
-                    },
-                    "tickets": {
-                        "href": "http://localhost:8080/api/ordrs/7/tickets"
-                    }
-                }
-            }
-        ]
-    },
-    "_links": {
-        "self": {
-            "href": "http://localhost:8080/api/ordrs"
-        },
-        "profile": {
-            "href": "http://localhost:8080/api/profile/ordrs"
-        }
-    }
-}`
+            }`
  
 * **Virheellinen vastaus:**
 
   * **Status:** 404 Not Found <br />
-    **Sisältö:** `{
-    	"timestamp": "2020-09-27T10:04:00.758+00:00",
-    	"status": 404,
-    	"error": "Not Found",
-    	"message": "No message available",
-    	"path": "/api/orders/"
-	}`
+    **Sisältö:** 
+            `{
+                "timestamp": "2020-09-27T10:04:00.758+00:00",
+                "status": 404,
+                "error": "Not Found",
+                "message": "No message available",
+                "path": "/api/orders/"
+            }`
 
 * **Sample Call:**
 
@@ -131,23 +132,23 @@ Näyttää yksittäisen tilauksen listasta.
   
   * **Status:** 200 OK <br />
     **Sisältö:** 
-    `{
-    "sold": "2020-10-01T00:00:00.000+00:00",
-    "_links": {
-        "self": {
-            "href": "http://localhost:8080/api/ordrs/6"
-        },
-        "ordr": {
-            "href": "http://localhost:8080/api/ordrs/6"
-        },
-        "user": {
-            "href": "http://localhost:8080/api/ordrs/6/user"
-        },
-        "tickets": {
-            "href": "http://localhost:8080/api/ordrs/6/tickets"
-        }
-    }
-}`
+            `{
+                "sold": "2020-10-01T00:00:00.000+00:00",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/api/ordrs/6"
+                    },
+                    "ordr": {
+                        "href": "http://localhost:8080/api/ordrs/6"
+                    },
+                    "user": {
+                        "href": "http://localhost:8080/api/ordrs/6/user"
+                    },
+                    "tickets": {
+                        "href": "http://localhost:8080/api/ordrs/6/tickets"
+                    }
+                }
+            }`
  
 * **Virheellinen vastaus:**
 
@@ -188,14 +189,21 @@ Lisää uuden tilauksen listaan.
 * **Dataparametrit**
 
   **Pakolliset**
-   `{
-    "user": "http://localhost:8080/api/users/{id}"
-   }`
+       `{
+        "user": "http://localhost:8080/api/users/{id}"
+       }`
 
   **Valinnaiset
-   `{
-    "sold": Date-tyyppinen data
-   }`
+       `{
+        "sold": Date-tyyppinen data
+       }`
+   
+   **Esimerkkikutsu:
+   
+       {
+        "sold":"2020-10-10",
+        "user": "http://localhost:8080/api/users/3" 
+        }
 
 * **Onnistunut vastaus:**
   
