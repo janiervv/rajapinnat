@@ -181,15 +181,15 @@ Lisää uuden tapahtuman tietokantaan.
 
 * **Dataparametrit**
 
-    {
-        "event_name":"Event name",
-        "starts_at":"2020.10.01.12.00.00", 
-        "ends_at":"2020.10.01.18.00.00", 
-        "capacity":"1000", 
-        "organizer_id":"/api/organizer/{id}", 
-        "location_id":"/api/location/{id}"", 
-        "prica_cat_id":"/api/priceCat/{id}""
-    }
+        {
+            "event_name":"Event name",
+            "starts_at":"2020.10.01.12.00.00", 
+            "ends_at":"2020.10.01.18.00.00", 
+            "capacity":"1000", 
+            "organizer_id":"/api/organizer/{id}", 
+            "location_id":"/api/location/{id}"", 
+            "price_cat_id":"/api/priceCat/{id}""
+        }
 
 * **Onnistunut vastaus:**
   
@@ -304,15 +304,15 @@ Muuttaa tapahtumaa tietokannassa.
 
 * **Dataparametrit**
 
-{
-    "event_name":"Event name",
-    "starts_at":"2020.10.01.12.00.00", 
-    "ends_at":"2020.10.01.18.00.00", 
-    "capacity":"1000", 
-    "organizer_id":"/api/organizer/{id}", 
-    "location_id":"/api/location/{id}"", 
-    "prica_cat_id":"/api/priceCat/{id}""
-}
+        {
+            "event_name":"Event name",
+            "starts_at":"2020.10.01.12.00.00", 
+            "ends_at":"2020.10.01.18.00.00", 
+            "capacity":"1000", 
+            "organizer_id":"/api/organizer/{id}", 
+            "location_id":"/api/location/{id}"", 
+            "price_cat_id":"/api/priceCat/{id}""
+        }
 
 * **Onnistunut vastaus:**
   
@@ -383,19 +383,19 @@ Muuttaa tapahtuman tietoa tietokannassa.
 
 Alla olevat kutsut toimivat dataparametrinä. 
 
-    {"event_name":"Event name"}
+        {"event_name":"Event name"}
 
-    {"starts_at":"2020.10.01.12.00.00"}
+        {"starts_at":"2020.10.01.12.00.00"}
 
-    {"ends_at":"2020.10.01.18.00.00"}
+        {"ends_at":"2020.10.01.18.00.00"}
 
-    {"capacity":"1000"}
+        {"capacity":"1000"}
 
-    {"organizer_id":"/api/organizer/{id}"}
+        {"organizer_id":"/api/organizer/{id}"}
 
-    {"location_id":"/api/location/{id}""}
+        {"location_id":"/api/location/{id}""}
 
-    { "prica_cat_id":"/api/priceCat/{id}""}
+        { "price_cat_id":"/api/priceCat/{id}""}
 
 * **Onnistunut vastaus:**
   
@@ -451,20 +451,20 @@ Alla olevat kutsut toimivat dataparametrinä.
 
 Vastaus:
 
-    `{
-        "organizer_name": "Organizer Name",
-        "_links": {
-            "self": {
-                "href": "http://localhost:8080/api/organizers/2"
-            },
-            "organizer": {
-                "href": "http://localhost:8080/api/organizers/2"
-            },
-            "events": {
-                "href": "http://localhost:8080/api/organizers/2/events"
+        `{
+            "organizer_name": "Organizer Name",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/api/organizers/2"
+                },
+                "organizer": {
+                    "href": "http://localhost:8080/api/organizers/2"
+                },
+                "events": {
+                    "href": "http://localhost:8080/api/organizers/2/events"
+                }
             }
-        }
-    }´
+        }´
 
 
 **Tapahtuman 1 paikka:** 
@@ -473,20 +473,20 @@ Vastaus:
 
 Vastaus:
 
-    {
-        "organizer_name": "Organizer Name",
-        "_links": {
-            "self": {
-                "href": "http://localhost:8080/api/organizers/2"
-            },
-            "organizer": {
-                "href": "http://localhost:8080/api/organizers/2"
-            },
-            "events": {
-                "href": "http://localhost:8080/api/organizers/2/events"
+        {
+            "organizer_name": "Organizer Name",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/api/organizers/2"
+                },
+                "organizer": {
+                    "href": "http://localhost:8080/api/organizers/2"
+                },
+                "events": {
+                    "href": "http://localhost:8080/api/organizers/2/events"
+                }
             }
         }
-    }
 
 
 
@@ -500,18 +500,18 @@ Vastaus
 
 ### /api/events/1/priceCat
 
-    {
-        "location": "Price Category",
-        "_links": {
-            "self": {
-                "href": "http://localhost:8080/api/priceCat/1"
-            },
-            "organizer": {
-                "href": "http://localhost:8080/api/priceCat/1"
-            },
-            "events": {
-                "href": "http://localhost:8080/api/priceCat/1/events"
+        {
+            "location": "Price Category",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/api/priceCat/1"
+                },
+                "organizer": {
+                    "href": "http://localhost:8080/api/priceCat/1"
+                },
+                "events": {
+                    "href": "http://localhost:8080/api/priceCat/1/events"
+                }
             }
         }
-    }
 
